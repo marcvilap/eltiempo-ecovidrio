@@ -17,7 +17,7 @@ import img01 from '$assets/images/img01.webp'
 				<span class="text-xs font-bold text-[#508D41]">Un planeta más limpio</span>
 				<span class="mb-4 text-xs">Un proyecto de:</span>
 				<a class="mb-auto w-32" href="/"><Icon name="logo-solid" /></a>
-				<h1 data-typing class="mt-8 py-2 font-serif text-5xl text-[#CDF375] md:text-7xl">Un <em>brindis</em> por el planeta:</h1>
+				<h1 data-typing class="mt-8 font-serif text-5xl text-[#CDF375] md:text-7xl md:leading-tight">Un <em>brindis</em> por el planeta:</h1>
 				<p data-reveal="fade-in-up delay-200" class="my-8 max-w-lg text-2xl uppercase">ecicla vidrio y únete a la celebración del Día del Reciclaje</p>
 				<p data-reveal="fade-in-up delay-400" class="mb-8 max-w-3xl">¿Alguna vez has pensado que es inútil reciclar botellas? o ¿en el efecto real que tiene en el planeta? Seguramente pienses que tu rutina semanal de bajar a la calle cargado con botellas usadas no es tan efectiva. Según datos de Ecovidrio, en España se depositan en el contenedor verde 8,6 millones de envases de vidrio al día, o lo que es lo mismo, 6.000 envases por minuto.</p>
 				<a class="mt-auto w-6 text-[#CDF375]" href="#down"><Icon class="animate-bounce" name="mouse" /></a>
@@ -38,9 +38,9 @@ import img01 from '$assets/images/img01.webp'
 			</div>
 		</section>
 
-		<section class="relative flex min-h-[36rem] items-center overflow-clip py-24 text-white">
-			<Image data-onview-zoom class="absolute left-0 top-0 size-full object-cover" src={bg02} alt="" />
-			<div data-reveal-group class="container relative">
+		<section data-reveal-group class="relative flex min-h-[36rem] items-center overflow-clip py-24 text-white">
+			<Image data-reveal="fade-in-up" class="absolute left-0 top-0 size-full object-cover" src={bg02} alt="" />
+			<div class="container relative">
 				<p data-reveal="fade-in-up" class="mx-auto max-w-3xl"><strong>Cada pequeño gesto cuenta: desde separar nuestros residuos correctamente hasta optar por productos reciclados o reutilizar aquellos que puedan tener más de un uso.</strong> Estas acciones no solo reducen nuestra huella ambiental, sino que también inspiran a otros a seguir nuestro ejemplo. Por eso, hemos venido con Mario Picazo a Calcín Ibérico, la planta de Ecovidrio en Guadalajara, en la que se reciclan todos los envases de vidrio de la Comunidad de Madrid. Vamos a conocer qué sucede con vuestros pequeños gestos y de paso desmitificar algunas de las leyendas urbanas que hay sobre el reciclaje.</p>
 			</div>
 		</section>
@@ -48,7 +48,7 @@ import img01 from '$assets/images/img01.webp'
 		<section class="overflow-clip py-24">
 			<div class="container grid gap-24">
 				<div data-reveal-group>
-					<h2 data-reveal="fade-in-up" class="relative z-10 mx-auto max-w-2xl font-serif text-5xl leading-tight text-[#CDF375] md:text-7xl">Mitos y realidades del <em>reciclaje</em></h2>
+					<h2 data-reveal="fade-in-up" class="relative z-10 mx-auto max-w-2xl font-serif text-5xl text-[#CDF375] md:text-7xl md:leading-tight">Mitos y realidades del <em>reciclaje</em></h2>
 				</div>
 				<div class="bg-grid grid gap-24 bg-center lg:-mt-36 lg:p-24">
 					{
@@ -75,7 +75,7 @@ import img01 from '$assets/images/img01.webp'
 					}
 				</div>
 				<div data-reveal-group>
-					<h2 data-reveal="fade-in-up" class="mx-auto max-w-2xl font-serif text-5xl leading-tight text-[#CDF375] md:text-7xl"><em>Reciclar vidrio:</em> un pequeño gesto con un <em>gran impacto</em></h2>
+					<h2 data-reveal="fade-in-up" class="mx-auto max-w-2xl font-serif text-5xl text-[#CDF375] md:text-7xl md:leading-tight"><em>Reciclar vidrio:</em> un pequeño gesto con un <em>gran impacto</em></h2>
 				</div>
 				<div data-reveal-group>
 					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">Entre las diversas formas de reciclaje, el reciclaje de vidrio destaca como un pequeño gesto con un gran impacto. <strong>El vidrio es un material que <span class="text-[#508D41] underline">se recicla al 100%</span> infinitas veces sin perder calidad.</strong> Al reciclar vidrio, no solo reducimos la cantidad de desechos que van a parar a los vertederos, sino que también ahorramos energía y recursos naturales.</p>
@@ -86,7 +86,9 @@ import img01 from '$assets/images/img01.webp'
 				<div data-reveal-group>
 					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">Cada botella de vidrio reciclada, es un paso hacia un futuro más limpio y verde. <strong>El reciclaje de vidrio evita la emisión de casi 580.000 toneladas de CO2 a la atmósfera</strong>, lo que equivale a dar 147 vueltas al mundo en avión o ahorrar 700.000 megavatio por hora de energía, lo que equivale al consumo energético de los hospitales de toda España durante 2 meses. Piensa en ello cuando hagas el necesario esfuerzo de reciclar, ya que (repetimos), sí que tiene premio.</p>
 				</div>
-				<Image data-onview-zoom class="rounded-2xl" src={img01} width={1632} alt="" />
+				<div data-reveal-group>
+					<Image data-reveal="fade-in-up" class="rounded-2xl" src={img01} width={1632} alt="" />
+				</div>
 				<div data-reveal-group>
 					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">Reciclar vidrio es solo el comienzo. Cada pequeño gesto cuenta en nuestra lucha colectiva contra el cambio climático y la degradación ambiental. Al unirnos a la celebración del Día del Reciclaje y adoptar hábitos más sostenibles en nuestras vidas diarias, podemos marcar la diferencia y proteger el único hogar que tenemos: la Tierra.</p>
 				</div>

@@ -81,9 +81,8 @@
 [data-reveal-group='active'] [data-reveal~='fade-in-left'],
 [data-reveal-group='active'] [data-reveal~='fade-in-right'] {
 	will-change: opacity, transform;
-	transition-duration: 1s;
+	transition-duration: 1.5s;
 	transition-property: opacity, transform;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 [data-reveal-group='active'] [data-reveal~='delay-200'] {
 	transition-delay: 200ms;
