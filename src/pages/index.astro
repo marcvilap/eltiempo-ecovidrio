@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '$layouts/Layout.astro'
+import Icon from '$components/Icon.astro'
+import videoPromo from '$assets/videos/promo.mp4'
+import bg01 from '$assets/images/bg01.webp'
+import bg02 from '$assets/images/bg02.webp'
+import bg03 from '$assets/images/bg03.webp'
+import img01 from '$assets/images/img01.webp'
+---
+
+<Layout>
+	<main class="overflow-clip text-center">
+		<section data-reveal-group class="relative overflow-clip bg-black text-white">
+			<Image data-reveal="fade-in-up" class="absolute left-0 top-0 size-full object-cover" src={bg01} alt="" />
+			<div class="container relative flex min-h-screen flex-col items-center pb-8 pt-20">
+				<span class="text-xs font-bold text-[#508D41]">Un planeta más limpio</span>
+				<span class="mb-4 text-xs">Un proyecto de:</span>
+				<a class="mb-auto w-32" href="/"><Icon name="logo-solid" /></a>
+				<h1 data-typing class="mt-8 py-2 font-serif text-5xl text-[#CDF375] md:text-7xl">Un <em>brindis</em> por el planeta:</h1>
+				<p data-reveal="fade-in-up delay-200" class="my-8 max-w-lg text-2xl uppercase">ecicla vidrio y únete a la celebración del Día del Reciclaje</p>
+				<p data-reveal="fade-in-up delay-400" class="mb-8 max-w-3xl">¿Alguna vez has pensado que es inútil reciclar botellas? o ¿en el efecto real que tiene en el planeta? Seguramente pienses que tu rutina semanal de bajar a la calle cargado con botellas usadas no es tan efectiva. Según datos de Ecovidrio, en España se depositan en el contenedor verde 8,6 millones de envases de vidrio al día, o lo que es lo mismo, 6.000 envases por minuto.</p>
+				<a class="mt-auto w-6 text-[#CDF375]" href="#down"><Icon class="animate-bounce" name="mouse" /></a>
+			</div>
+		</section>
+
+		<div id="down"></div>
+
+		<section class="overflow-clip py-24">
+			<div class="container grid gap-24">
+				<div data-reveal-group>
+					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">El <strong>Día del Reciclaje</strong> es más que una simple fecha en el calendario; es un recordatorio de que nuestro compromiso constante con el medio ambiente sí tiene premio. Es una oportunidad para reflexionar sobre nuestras acciones diarias y cómo pueden impactar positivamente en la salud de nuestro planeta, pero también un compromiso continuo que debemos mantener en nuestras vidas diarias.</p>
+				</div>
+				<video data-onview-zoom class="w-full rounded-2xl" src={videoPromo} controls></video>
+				<div data-reveal-group>
+					<h2 data-reveal="fade-in-up" class="mx-auto max-w-2xl font-serif text-3xl text-[#508D41] md:text-5xl md:leading-tight">En 2023, tú, yo y el resto de los españoles reciclamos 19,2 kilogramos de <em>vidrio</em>, el equivalente a 66 <em>envases por persona</em>.</h2>
+				</div>
+			</div>
+		</section>
+
+		<section class="relative flex min-h-[36rem] items-center overflow-clip py-24 text-white">
+			<Image data-onview-zoom class="absolute left-0 top-0 size-full object-cover" src={bg02} alt="" />
+			<div data-reveal-group class="container relative">
+				<p data-reveal="fade-in-up" class="mx-auto max-w-3xl"><strong>Cada pequeño gesto cuenta: desde separar nuestros residuos correctamente hasta optar por productos reciclados o reutilizar aquellos que puedan tener más de un uso.</strong> Estas acciones no solo reducen nuestra huella ambiental, sino que también inspiran a otros a seguir nuestro ejemplo. Por eso, hemos venido con Mario Picazo a Calcín Ibérico, la planta de Ecovidrio en Guadalajara, en la que se reciclan todos los envases de vidrio de la Comunidad de Madrid. Vamos a conocer qué sucede con vuestros pequeños gestos y de paso desmitificar algunas de las leyendas urbanas que hay sobre el reciclaje.</p>
+			</div>
+		</section>
+
+		<section class="overflow-clip py-24">
+			<div class="container grid gap-24">
+				<div data-reveal-group>
+					<h2 data-reveal="fade-in-up" class="relative z-10 mx-auto max-w-2xl font-serif text-5xl leading-tight text-[#CDF375] md:text-7xl">Mitos y realidades del <em>reciclaje</em></h2>
+				</div>
+				<div class="bg-grid grid gap-24 bg-center lg:-mt-36 lg:p-24">
+					{
+						[
+							{ title: 'El reciclaje de vidrio no sirve para nada', description: 'Cuando reciclamos un envase de vidrio, estamos contribuyendo a darle vidas infinitas y evitamos que haya que extraer arenas de la naturaleza, además de proteger nuestro ecosistema y luchar contra el cambio climático.' },
+							{ title: 'El reciclaje no ofrece puestos de trabajo', description: 'Al contrario. La cadena de reciclaje de envases de vidrio genera más de 8.000 empleos directos e indirectos. Son parte de los llamados “empleos verdes”, que se encuentran repartidos por todo el país.' },
+							{ title: '¿Es cierto que en otros países pagan por reciclar?', description: 'Algunos países tienen implantado el sistema de devolución y retorno, en el que se les pide a los ciudadanos que adelanten un depósito económico por cada producto envasado que compran. Los ciudadanos recuperan este depósito si devuelven los envases en perfecto estado.' },
+							{ title: '¿Es fácil encontrar contenedores verdes?', description: 'España es uno de los países con mayor número de contenedores verdes de toda Europa, con una media de un contenedor de vidrio por cada 197 habitantes. Ecovidrio instala anualmente 5.000 puntos nuevos para seguir acercando el reciclaje a todos.' },
+							{ title: '¿Es verdad que luego se mezclan todos los residuos en el camión?', description: 'Los contenedores de vidrio contienen un solo material. Y lo mismo pasa con los camiones que los recogen: son exclusivos para el vidrio. Nadie deshace el esfuerzo que has hecho en casa.' },
+						].map(({ title, description }, index) => (
+							<div data-reveal-group class="group">
+								<div data-reveal="fade-in-up" class="grid items-end text-left md:grid-cols-2">
+									<div class="relative pb-8 md:group-odd:mr-24 md:group-even:order-2 md:group-even:ml-24">
+										<span class="absolute inset-0 flex items-center justify-center font-serif text-9xl text-[#CDF375] md:translate-y-4 md:text-[16rem]">{index + 1}</span>
+										<h3 class="relative font-serif text-3xl text-[#508D41] md:text-5xl md:leading-tight">{title}</h3>
+									</div>
+									<div>
+										<Icon class="mx-auto mb-8 w-48" name={`icon-${index + 1}`} />
+										<p>{description}</p>
+									</div>
+								</div>
+							</div>
+						))
+					}
+				</div>
+				<div data-reveal-group>
+					<h2 data-reveal="fade-in-up" class="mx-auto max-w-2xl font-serif text-5xl leading-tight text-[#CDF375] md:text-7xl"><em>Reciclar vidrio:</em> un pequeño gesto con un <em>gran impacto</em></h2>
+				</div>
+				<div data-reveal-group>
+					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">Entre las diversas formas de reciclaje, el reciclaje de vidrio destaca como un pequeño gesto con un gran impacto. <strong>El vidrio es un material que <span class="text-[#508D41] underline">se recicla al 100%</span> infinitas veces sin perder calidad.</strong> Al reciclar vidrio, no solo reducimos la cantidad de desechos que van a parar a los vertederos, sino que también ahorramos energía y recursos naturales.</p>
+				</div>
+				<div data-reveal-group>
+					<h3 data-reveal="fade-in-up" class="mx-auto max-w-2xl font-serif text-3xl text-[#508D41] md:text-5xl md:leading-tight">El proceso de reciclaje de vidrio produce menos emisiones de carbono en comparación con la fabricación de vidrio nuevo, lo que contribuye a la lucha contra el cambio climático.</h3>
+				</div>
+				<div data-reveal-group>
+					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">Cada botella de vidrio reciclada, es un paso hacia un futuro más limpio y verde. <strong>El reciclaje de vidrio evita la emisión de casi 580.000 toneladas de CO2 a la atmósfera</strong>, lo que equivale a dar 147 vueltas al mundo en avión o ahorrar 700.000 megavatio por hora de energía, lo que equivale al consumo energético de los hospitales de toda España durante 2 meses. Piensa en ello cuando hagas el necesario esfuerzo de reciclar, ya que (repetimos), sí que tiene premio.</p>
+				</div>
+				<Image data-onview-zoom class="rounded-2xl" src={img01} width={1632} alt="" />
+				<div data-reveal-group>
+					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">Reciclar vidrio es solo el comienzo. Cada pequeño gesto cuenta en nuestra lucha colectiva contra el cambio climático y la degradación ambiental. Al unirnos a la celebración del Día del Reciclaje y adoptar hábitos más sostenibles en nuestras vidas diarias, podemos marcar la diferencia y proteger el único hogar que tenemos: la Tierra.</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="relative pb-48 pt-24">
+			<Image class="absolute left-0 top-0 size-full object-cover object-bottom" src={bg03} alt="" />
+			<span class="absolute inset-0 bg-gradient-to-b from-[#FFFBF8] to-transparent"></span>
+			<div data-reveal-group class="container relative">
+				<div data-reveal="fade-in-up">
+					<p class="text-sm">ElTiempo Content para</p>
+					<Icon class="mx-auto mt-4 w-40" name="logo-color" />
+				</div>
+			</div>
+		</footer>
+	</main>
+</Layout>

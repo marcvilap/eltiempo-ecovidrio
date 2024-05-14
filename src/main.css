@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Internacional';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(./assets/fonts/internacional-regular.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'Internacional';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url(./assets/fonts/internacional-bold.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'The Silver Editorial';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(./assets/fonts/the-silver-editorial-regular.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'The Silver Editorial';
+		font-style: italic;
+		font-weight: 400;
+		font-display: swap;
+		src: url(./assets/fonts/the-silver-editorial-italic.woff2) format('woff2');
+	}
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	@media (min-width: 1281px) {
+		html {
+			font-size: 1.25vw;
+		}
+	}
+	@media (min-width: 1920px) {
+		html {
+			font-size: 24px;
+		}
+	}
+	html {
+		@apply scroll-smooth bg-[#FFFBF8] text-[#305748] antialiased;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-balance;
+	}
+	p {
+		@apply text-pretty;
+	}
+}
+
+@layer utilities {
+	.bg-grid {
+		background-image: url(./assets/images/grid.webp);
+		background-size: 20rem;
+	}
+}
+
+/* REVEAL EFFECT
+****************************************************************************************************/
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-up'] {
+	opacity: 0;
+}
+[data-reveal-group]:not([data-reveal-group='active']) [data-reveal~='fade-in-up'] {
+	transform: translateY(8rem);
+}
+[data-reveal-group='active'] [data-reveal~='fade-in-up'],
+[data-reveal-group='active'] [data-reveal~='fade-in-left'],
+[data-reveal-group='active'] [data-reveal~='fade-in-right'] {
+	will-change: opacity, transform;
+	transition-duration: 1s;
+	transition-property: opacity, transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-reveal-group='active'] [data-reveal~='delay-200'] {
+	transition-delay: 200ms;
+}
+[data-reveal-group='active'] [data-reveal~='delay-400'] {
+	transition-delay: 400ms;
+}
+
+/* ZOOM EFFECTS
+****************************************************************************************************/
+@keyframes onview-zoom {
+	0% {
+		transform: scale(0.75);
+	}
+}
+[data-onview-zoom] {
+	animation: onview-zoom linear both;
+	animation-timeline: view();
+	animation-range: entry;
+	transform-origin: top center;
+	will-change: transform;
+}
+
+/* TYPING EFFECTS
+****************************************************************************************************/
+@screen lg {
+	@keyframes typing {
+		0% {
+			width: 0;
+		}
+	}
+	@keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+	}
+	[data-typing] {
+		width: 53rem;
+		animation:
+			typing 2s steps(26),
+			blink 0.5s step-end infinite alternate;
+		overflow: clip;
+		border-right: 2px solid;
+		white-space: nowrap;
+	}
+}
