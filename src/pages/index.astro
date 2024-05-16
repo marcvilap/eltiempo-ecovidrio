@@ -25,13 +25,17 @@ import img01 from '$assets/images/img01.webp'
 		</section>
 
 		<div id="down"></div>
-
 		<section class="overflow-clip py-24">
 			<div class="container grid gap-24">
 				<div data-reveal-group>
 					<p data-reveal="fade-in-up" class="mx-auto max-w-3xl">El <strong>Día del Reciclaje</strong> es más que una simple fecha en el calendario; es un recordatorio de que nuestro compromiso constante con el medio ambiente sí tiene premio. Es una oportunidad para reflexionar sobre nuestras acciones diarias y cómo pueden impactar positivamente en la salud de nuestro planeta, pero también un compromiso continuo que debemos mantener en nuestras vidas diarias.</p>
 				</div>
-				<video data-onview-zoom class="w-full rounded-2xl" src={videoPromo} controls></video>
+
+				<!-- Contenedor para el iframe de YouTube -->
+				<div class="relative w-full" style="padding-top: 56.25%;">
+					<iframe class="absolute left-0 top-0 h-full w-full" src="https://www.youtube.com/embed/rxRoCfk-8rs?si=hnzVVgL5wtonvgT_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+
 				<div data-reveal-group>
 					<h2 data-reveal="fade-in-up" class="mx-auto max-w-2xl font-serif text-3xl text-[#508D41] md:text-5xl md:leading-tight">En 2023, tú, yo y el resto de los españoles reciclamos 19,2 kilogramos de <em>vidrio</em>, el equivalente a 66 <em>envases por persona</em>.</h2>
 				</div>
